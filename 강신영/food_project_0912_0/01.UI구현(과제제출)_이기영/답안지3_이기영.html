@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .show{
+            cursor: pointer;
+            text-align: center;
+            height: 50px;
+            border: 1px solid red;
+            line-height: 50px;
+        }
+        .inline_num{
+            display: flex;
+            flex-direction: column;
+        }
+        .inline_num > div{
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="show">
+        동행복권 1083회 당첨번호 발표!!
+    </div>
+    <div class="inline_num">
+        <div>첫 번째 번호는</div>
+        <div>두 번째 번호는 </div>
+        <div>세 번째 번호는 </div>
+        <div>네 번째 번호는 </div>
+        <div>다섯 번째 번호는 </div>
+        <div>여섯 번째 번호는 </div>
+        <div>보너스 번호는 </div>
+    </div>
+    <script>
+        let lotto_list = [3,7,14,15,22,38,17];
+        let nums = document.querySelectorAll(".inline_num > div")
+        document.querySelector(".show").addEventListener("click",function(){
+            for(let i = 0 ; i<lotto_list.length ;i++){
+                nums[i].innerHTML += ` ${lotto_list[i]} 입니다`;
+            }
+        });
+        
+        for(let i = 0 ; i<lotto_list.length ;i++){
+            nums[i]
+            document.querySelector("body")
+            // lotto_list[i].
+        }
+    </script>
+</body>
+</html>

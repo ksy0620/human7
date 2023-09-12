@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,tr,td {
+            border: 1px solid black;
+        }
+        table {
+            border: 1px solid gray;
+        }
+        thead{
+            font-weight: 900;
+        }
+        .comment{
+            display: flex;
+            margin-top: 10px;
+        }
+        .comment :nth-child(n+1){
+            margin-right: 3px;
+        }
+        .input_text{
+            height: 20px;
+        }
+        .copy, .del {
+            cursor: pointer;
+            border: 1px solid gray;
+            border-radius: 5px;
+            text-align: center;
+            padding: 0 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>검색 안내사항</h1>
+    <ol>
+        <li>사용일자 : 2000년 1월 ~ 10월</li>
+        <li>제출방법 : google.com 사이트에 접속하여 검색</li>
+    </ol>
+    <a href="google.com">구글 사이트로 이동</a>
+    <h2>오늘의 날씨</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>지역</td>
+                <td>현재기온</td>
+                <td colspan="2">불쾌지수/습도(%)</td>
+                <!-- <td></td> -->
+                <td>풍속(m/s)</td>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">서울/경기</td>
+                <td>23</td>
+                <td>60</td>
+                <td>80</td>
+                <td>4.7</td>
+            </tr>
+            <tr>
+                <!-- <td></td>  -->
+                <td>20</td>
+                <td>60</td>
+                <td>80</td>
+                <td>5.0</td>
+            </tr>
+            <tr>
+                <td>제주도</td>
+                <td>21</td>
+                <td>65</td>
+                <td>85</td>
+                <td>3.6</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="comment">
+        <div>한 줄 코멘트 : </div>
+        <input class="input_text" type="text" value="">
+        <div class="copy">확인</div>
+        <div class="del">삭제</div>
+    </div>
+    <div class="reple"></div>
+    <script>
+        document.querySelector(".copy").addEventListener("click",function(){
+            document.querySelector(".reple").innerText = document.querySelector(".input_text").value; 
+        });
+        document.querySelector(".del").addEventListener("click",function(){
+            document.querySelector(".reple").innerText = "";
+        });
+    </script>
+</body>
+
+</html>

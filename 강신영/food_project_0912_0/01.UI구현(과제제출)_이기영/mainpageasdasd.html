@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 500px;
+            width: 1200px;
+        }
+        .grey{
+            background-color: #8f8f8f;
+            text-align: center;
+            width: 300px;
+            height: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: black" class="main"></div>
+    <div style="display: flex;" id="content">
+        <div class="grey" >A</div>
+        <div class="grey" >B</div>
+        <div class="grey" >C</div>
+        <div class="grey" >D</div>
+    </div>
+    <script>
+        let arr_content = document.querySelectorAll("#content div");
+        let index = 0;
+        // console.log(arr_content);
+        for(let i = 0 ;i<arr_content.length ;i++){
+            arr_content[i].addEventListener("click",function(){   
+                console.log(i);
+                switch (i){
+                    case 0:
+                    arr_content[i].style.backgroundColor = "red";
+                    index = 0;
+                    break;
+                    case 1:
+                    arr_content[i].style.backgroundColor = "yellow";
+                    index = 1;
+                    break;
+                    case 2:
+                    arr_content[i].style.backgroundColor = "green";
+                    index = 2;
+                    break;
+                    case 3:
+                    arr_content[i].style.backgroundColor = "darkblue";
+                    index = 3;
+                    break;
+                }
+                let mainpage = document.querySelector(".main");
+                // console.log(mainpage.style.backgroundColor;
+                mainpage.style.backgroundColor = arr_content[i].style.backgroundColor;
+                // console.log(arr_content[i].style.backgroundColor);
+                for(let i = 0 ;i<arr_content.length ;i++){
+                    if(i != index){
+                        arr_content[i].style.backgroundColor = "#8f8f8f";
+                    }
+                }
+            });
+
+            arr_content[i].addEventListener("mouseover",function(){
+                if(i != index){
+                    arr_content[i].style.backgroundColor = "#8f8f8fa5";
+                }   
+            });
+            arr_content[i].addEventListener("mouseout",function(){
+                arr_content[i].style.backgroundColor = "#8f8f8f";
+                let mainpage = document.querySelector(".main");
+                arr_content[index].style.backgroundColor = mainpage.style.backgroundColor;
+            });
+        }
+
+    </script>
+</body>
+</html>
+
+<!-- 인터벌로 이동 -->

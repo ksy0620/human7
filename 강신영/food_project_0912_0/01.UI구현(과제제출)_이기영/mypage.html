@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/component/mypage/css/section1.css">
+    <link rel="stylesheet" href="assets/component/mypage/css/section0.css">
+    <style>
+        * {
+            margin: 0;
+            font-size: 0;
+        }
+
+        .right {
+            width: 70%;
+            /* border: 1px solid red; */
+            display: inline-block;
+        }
+
+        .all_0 {
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .all_1 {
+            /* border: 1px solid green; */
+            /* display: flex; */
+            width: 90%;
+        }
+
+        .hi {
+            /* border: 1px solid red; */
+            margin-top: 70px;
+            height: 30px;
+            width: 100%;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .my_0 {
+            margin-top: 80px;
+            margin-left: 40px;
+            font-size: 25px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .my_1,
+        .notice {
+            margin-left: 40px;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .left div:nth-child(3) { /*수정*/
+            color: rgb(230, 142, 34);
+        }
+
+        .left hr {
+            width: 70%;
+        }
+
+        .right hr {
+            width: 80%;
+        }
+
+        .left {
+            display: inline-block;
+            /* border: 1px solid red; */
+            width: 30%;
+            vertical-align: top;
+            height: 600px;
+        }
+
+        .top_box {
+            border: 3px solid rgb(230, 142, 34);
+            padding-left: 4%;
+            margin-left: 3%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 10px;
+            width: 90%;
+            height: 350px;
+        }
+
+        .top_box>div {
+            font-size: 20px;
+            display: inline-block;
+        }
+
+        .right {
+            /* margin-left: 5%; */
+            display: inline-block;
+            /* border: 1px solid red; */
+            width: 65%;
+            height: 650px;
+        }
+
+
+
+        .left_right {
+            margin-top: 60px;
+            /* border: 1px solid red; */
+            width: 100%;
+        }
+
+
+        .write_title {
+            margin-left: 10%;
+            font-size: 25px;
+            margin-top: 30px;
+
+        }
+
+        .write_name,
+        .write_date {
+            margin-left: 10%;
+            font-size: 18px;
+        }
+
+        .write_date {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .write_name {
+            margin-top: 30px;
+        }
+
+        @media(max-width:800px) {
+            .left>div {
+                font-size: 15px;
+            }
+
+            .top_box>div {
+                font-size: 15px;
+            }
+
+            .hi {
+                font-size: 18px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all_0">
+        <div class="all_1">
+            <div class="hi">안녕하세요 김호연님 !</div>
+            <div class="left_right">
+                <div class="left">
+                    <div class="my_0">MY</div>
+                    <hr>
+                    <div class="my_1">회원정보</div>
+                    <div class="my_1">찜한 레시피</div>
+                    <div class="my_1">나의 게시물</div>
+                    <div class="my_0">고객센터</div>
+                    <hr>
+                    <div class="notice">공지사항</div>
+                </div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        show_contents();
+        const xhr = new XMLHttpRequest();
+
+        function load_contents(i) {
+            xhr.open("GET", `assets/component/mypage/section${i}.html`);
+            xhr.send();
+            console.log(1)
+        }
+        function show_contents() {
+            window.addEventListener("load", function () {
+                console.log(1)
+                let i = 0;
+                load_contents(i);
+                xhr.onload = function () {
+                    let text = xhr.responseText;
+                    console.log(text)
+                    let htmlDom = new DOMParser().parseFromString(text, "text/html");
+                    console.log(htmlDom)
+                    document.querySelector(".right").innerHTML = htmlDom.querySelector("body > div").innerHTML;
+                }
+            });
+        }
+
+        function exchange_contents(){
+
+        }
+    </script>
+</body>
+
+</html>

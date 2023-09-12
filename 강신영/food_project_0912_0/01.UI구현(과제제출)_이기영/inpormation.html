@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            font-size: 0;
+        }
+
+        .all_0 {
+            border: 1px solid red;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .all_1 {
+            border: 1px solid green;
+            /* display: flex; */
+            width: 90%;
+
+
+
+        }
+
+        .hi {
+            /* border: 1px solid red; */
+            margin-top: 70px;
+            height: 30px;
+            width: 100%;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .my_0 {
+            margin-top: 80px;
+            margin-left: 40px;
+            font-size: 25px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .my_1,
+        .notice {
+            margin-left: 40px;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .left hr {
+            width: 70%;
+        }
+
+        .right hr {
+            width: 80%;
+        }
+
+        .left {
+            display: inline-block;
+            border: 1px solid red;
+            width: 30%;
+            vertical-align: top;
+            height: 600px;
+
+        }
+
+        .top_box {
+            border: 3px solid rgb(230, 142, 34);
+            padding-left: 4%;
+            margin-left: 3%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 10px;
+            width: 90%;
+            height: 300px;
+        }
+
+        .top_box>div {
+            font-size: 20px;
+            display: inline-block;
+        }
+
+        .information_id_2,
+        .information_password_2,
+        .information_birth_2,
+        .information_gender_2 {
+            margin-left: 10%;
+            width: 50%;
+        }
+
+        .information_img {
+            width: 30%;
+            margin-left: 4%;
+        }
+
+        .information_name {
+            margin-left: -4%;
+            width: 50%;
+        }
+
+        .information_title {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .information_id,
+        .information_password,
+        .information_birth {
+            margin-bottom: 5px;
+        }
+
+        .information_title,
+        .information_id,
+        .information_password,
+        .information_birth,
+        .information_gender {
+            margin-top: 10px;
+            width: 20%;
+            text-align: center;
+            white-space: nowrap;
+
+        }
+
+        img {
+            margin-left: 2%;
+        }
+
+        .bottom_box {
+            border: 3px solid rgb(230, 142, 34);
+            border-radius: 10px;
+            width: 90%;
+            height: 200px;
+            padding-left: 4%;
+            margin-left: 3%;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-radius: 10px;
+        }
+
+        .bottom_box>div {
+            font-size: 20px;
+            display: inline-block;
+        }
+
+        .right {
+            margin-left: 5%;
+            display: inline-block;
+            border: 1px solid red;
+            width: 60%;
+            height: 600px;
+        }
+
+        .information_title_2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .information_email_2,
+        .information_phone_2 {
+            margin-bottom: 10px;
+            margin-left: 10%;
+            width: 51%;
+        }
+
+        .information_phone {
+            margin-top: 10px;
+        }
+
+        .information_phone,
+        .information_email {
+            width: 18%;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        input {
+            margin-left: 5%;
+            font-size: 15px;
+        }
+
+        .left_right {
+            margin-top: 60px;
+            /* border: 1px solid red; */
+            width: 100%;
+        }
+
+        .out {
+            margin-top: 20px;
+            margin-left: 81%;
+        }
+        @media(max-width:700px) {
+            .left > div {
+                font-size: 18px;
+            }
+            .top_box > div {
+                font-size: 15px;
+            }
+            .bottom_box > div {
+                font-size: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all_0">
+        <div class="all_1">
+            <div class="hi">안녕하세요 김호연님 !</div>
+            <div class="left_right">
+                <div class="left">
+                    <div class="my_0">MY</div>
+                    <hr>
+                    <div class="my_1">회원정보</div>
+                    <div class="my_1">나의 게시물</div>
+                    <div class="my_1">찜한 레시피</div>
+                    <div class="my_0">고객센터</div>
+                    <hr>
+                    <div class="notice">공지사항</div>
+                </div>
+                <div class="right">
+                    <div class="top_box">
+                        <div class="information_title">기본 정보</div><br>
+                        <div class="information_img">
+                            
+                            <img
+                                src="https://cdn.discordapp.com/attachments/1123448023238844436/1149601848035127328/information_name_2.png">
+                        </div>
+                        <div class="information_name">김호연
+                        </div> <input type="button" value="수정"><br>
+
+                        <div class="information_id">아이디</div>
+                        <div class="information_id_2">ghdus0129
+
+                        </div>
+                        <input type="button" value="수정"><br>
+                        <hr>
+                        <div class="information_password">비밀번호</div>
+                        <div class="information_password_2">***********
+
+                        </div>
+                        <input type="button" value="수정"><br>
+                        <hr>
+                        <div class="information_birth">생년월일</div>
+                        <div class="information_birth_2">2000.01.29
+
+                        </div>
+                        <input type="button" value="수정"><br>
+                        <hr>
+                        <div class="information_gender">성별</div>
+                        <div class="information_gender_2">여자
+
+                        </div>
+                        <input type="button" value="수정">
+                    </div>
+                    <div class="bottom_box">
+                        <div class="information_title_2">연락처 정보</div><br>
+                        <div class="information_email">이메일</div>
+                        <div class="information_email_2">hy0129@naver.com
+
+                        </div>
+                        <input type="button" value="수정"><br>
+                        <hr>
+                        <div class="information_phone">휴대전화</div>
+                        <div class="information_phone_2">010-9095-0129
+
+                        </div>
+                        <input type="button" value="수정">
+
+                    </div>
+                    <input type="button" class="out" value="회원 탈퇴">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
